@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <meta charset="UTF-8">
+    <h1 class="text-secondary">И на Марсе будут яблоки цвести</h1>
+    {% if 'инженер' in title or 'строитель' in title %}
+        <h2 align="center">Инженерные тренажёры</h2>
+        <img src="/static/img3.png" alt="Not found">
+    {% else %}
+        <h2 align="center">Научные симуляторы</h2>
+        <img src="/static/img2.png" alt="Not found">
+    {% endif %}
+{% endblock %}
