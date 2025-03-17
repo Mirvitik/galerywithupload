@@ -15,15 +15,12 @@ def answer():
             break
         return render_template('1.html', data=images)
     if request.method == 'POST':
-        print('пост сука')
         f = request.files['file']
-        print(f)
         f.save(f'static/img/image{cnt}.png')
         cnt += 1
         for el in os.walk(os.path.join(os.getcwd(), 'static\\img')):
             images = [i for i in el[-1]]
             break
-        print(images)
         return render_template('1.html', data=images)
 
 
